@@ -1,0 +1,22 @@
+Informe de Actividad: Migración de Productos a Plantilla GoWilds
+
+Se realizó la migración de la sección de productos destacados del proyecto original a la plantilla GoWilds, implementando dos modalidades:
+
+Productos manuales (HTML estático):
+
+Se adaptó la estructura de la plantilla para mostrar los productos de forma manual.
+
+Cada producto incluye título, descripción, imagen, precio, valoración y enlaces correspondientes.
+
+Esta modalidad funciona únicamente con HTML y estilos de la plantilla, sin necesidad de scripts externos.
+
+
+Productos dinámicos (simulación con generación por JavaScript):
+
+Se adaptó la plantilla para permitir la generación automática de tarjetas de productos a partir de los datos del proyecto original.
+
+Mantiene toda la información de cada producto y facilita la actualización sin modificar el HTML manualmente.
+
+Conclusión:
+Con ambas modalidades se logró integrar la sección de productos destacados a la plantilla GoWilds, preservando la estética y funcionalidad del proyecto original, 
+ofreciendo una versión estática para pruebas rápidas y una versión dinámica escalable para producción.
