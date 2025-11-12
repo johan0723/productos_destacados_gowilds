@@ -4631,3 +4631,95 @@ ul.slick-dots li {
           width: 100%; } }
       .reviews-wrapper .reviews-inner-box .reviews-progress .single-progress-bar:not(:last-child) {
         margin-bottom: 38px; }
+
+.product-prev, .product-next {
+  position: absolute;
+  top: 45%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.product-prev { left: 0; transform: translateX(-50%); }
+.product-next { right: 0; transform: translateX(50%); }
+
+.product-prev i, .product-next i {
+  font-size: 20px;
+  color: #333;
+}
+
+/* Tarjeta y contenido ocupan todo el slide */
+.product-carousel .single-service-item-three {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.product-carousel .single-service-item-three .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye uniformemente los elementos */
+    height: 100%;
+}
+
+/* Limita la descripción a 2 líneas y muestra "..." si es demasiado larga */
+.product-carousel .single-service-item-three .content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+
+/* Imagen centrada y tamaño consistente */
+.product-carousel .single-service-item-three .content img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Alinea precio y calificación al final */
+.product-carousel .single-service-item-three .meta-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* Estilo del precio */
+.product-carousel .single-service-item-three .meta-price .price {
+    font-weight: bold;
+    color: #63AB45;
+    margin: 0;
+}
+
+/* Estilo de la calificación */
+.product-carousel .single-service-item-three .meta-price .rate {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #f5b50a;
+}
+
+.product-carousel .single-service-item-three .meta-price .rate i {
+    margin-right: 5px;
+    color: #f5b50a;
+}
+
+/* Meta icons opcionales (si las usas) */
+.product-carousel .single-service-item-three .meta-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}

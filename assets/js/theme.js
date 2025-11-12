@@ -267,39 +267,6 @@
             ]
         });
     }
-    if ($('.slider-active-3-item').length) {
-        $('.slider-active-3-item').slick({
-            dots: false,
-            arrows: false,
-            infinite: true,
-            speed: 800,
-            autoplay: true,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            prevArrow: '<div class="prev"><i class="far fa-angle-left"></i></div>',
-            nextArrow: '<div class="next"><i class="far fa-angle-right"></i></div>',
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 991,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 800,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-    }
     if ($('.slider-active-3-item-dot').length) {
         $('.slider-active-3-item-dot').slick({
             dots: true,
@@ -583,4 +550,41 @@
 
 })(window.jQuery);
 
+
+$(document).ready(function () {
+  var $carousel = $('.product-carousel');
+
+  if ($carousel.length && $carousel.children().length) {
+    $carousel.slick({
+      dots: false,
+      infinite: true,
+      autoplay: true,
+      speed: 600,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      prevArrow: $('.product-prev'),
+      nextArrow: $('.product-next'),
+      responsive: [
+        { breakpoint: 1200, settings: { slidesToShow: 2 } },
+        { breakpoint: 800, settings: { slidesToShow: 1 } }
+      ]
+    });
+
+    // Igualar altura de todas las tarjetas
+    function setEqualHeight() {
+      var maxHeight = 0;
+      $carousel.find('.single-service-item-three').css('height', 'auto'); // reset
+      $carousel.find('.single-service-item-three').each(function () {
+        if ($(this).height() > maxHeight) maxHeight = $(this).height();
+      });
+      $carousel.find('.single-service-item-three').height(maxHeight);
+    }
+
+    $carousel.on('setPosition', function () {
+      setEqualHeight();
+    });
+
+    setEqualHeight();
+  }
+});
 
